@@ -1,9 +1,11 @@
 import AboutUs from './components/AboutUs.tsx'
+import CourseList from './components/CourseList.tsx'
 function App() {
 
   return (
     <>
-      <AboutUs></AboutUs>
+      <CourseList></CourseList>
+      {/* <AboutUs></AboutUs> */}
     </>
   )
 }
