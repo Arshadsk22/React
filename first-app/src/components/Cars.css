@@ -1,3 +1,11 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -14,8 +22,4 @@ td {
 
 th {
     background-color: #d83c3c;
-}
-
-tr:hover {
-    background-color: #d24a4a;
 }

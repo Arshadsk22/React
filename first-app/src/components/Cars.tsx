@@ -11,23 +11,24 @@ function Car() {
 
     return (
         <div>
-            <table>               
-                <thead>
+            <table className='table table-bordered table-hover table-striped'>
+                <thead className='strong em'>
                     <tr>
-                        <th>Make</th>
-                        <th>Model</th>
-                        <th>Year</th>
-                        <th>Color</th>
+                        <th>Car Brand</th>
+                        <th>Car Model</th>
+                        <th>Making Year</th>
+                        <th>Car Color</th>
                     </tr>
                 </thead>
-                <tbody>
-                    {jdmCars.map((car, index) => (
-                        <tr key={index}>
+                <tbody className='table-striped '>
+                    {jdmCars.map((car) => (
+                        <tr>
                             <td>{car.make}</td>
                             <td>{car.model}</td>
                             <td>{car.year}</td>
                             <td>{car.color}</td>
                         </tr>
+
                     ))}
                 </tbody>
             </table>
