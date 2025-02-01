@@ -1,25 +1,22 @@
 body{
+    margin: 0;
     display: flex;
     justify-content: center;
+}
+.vehicles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
+    height: 100vh;
+    text-align: center;
 }
 
-table {
+.title {
+    margin-bottom: 20px;
+}
+
+.list-group {
     width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 18px;
-    text-align: left;
-}
-
-th,
-td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
-}
-
-th {
-    background-color: #d83c3c;
+    max-width: 600px;
 }
