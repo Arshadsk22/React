@@ -1,18 +1,22 @@
-body {
+.container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding-left: 470px;
 }
 
-h1 {
-    color: rgb(33, 130, 98);
+.h2 {
+    margin-bottom: 20px;
+}
+
+.list-group {
+    width: 100%;
+    max-width: 600px;
 }
 
 .list-group-item {
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.list-group-item:hover {
-    background-color: #2bbe61;
-    color: #fff;
+    margin-bottom: 10px; /* Add space between list items */
 }

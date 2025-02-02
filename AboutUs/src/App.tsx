@@ -1,32 +1,13 @@
-import AboutUs from './components/AboutUs.tsx'
-import CourseList from './components/CourseList.tsx'
 import AdvanceCourseList from './components/AdvanceCourseList.tsx'
-function App() {
-  const AdvanceCourses = [
-    {
-      id: 1,
-      name: 'React',
-      duration: '30 days',
-    },
-  
-    {
-      id: 2,
-      name: 'JavaScript',
-      duration: '30 days',
-    },
+import fetchCourses from './Services/CourseServices.tsx'
 
-    {
-      id: 3,
-      name: 'HTML',
-      duration: '30 days',
-    }
-  ];
+function App() {
 
   return (
 
     <>
       {/* <CourseList></CourseList> */}
-      <AdvanceCourseList courses={AdvanceCourses}/>
+      <AdvanceCourseList courses={fetchCourses()} />
       {/* <AboutUs></AboutUs> */}
     </>
   )

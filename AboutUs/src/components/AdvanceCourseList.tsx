@@ -1,24 +1,18 @@
-import './CourseList.css';
+import './AdvanceCourseList.css';
+import Course from '../Models/CourseModel';
 
-interface Course {
-    id: number;
-    name: string;
-    duration: string;
-}
-interface CourseListProp{
+interface CourseListProp {
     courses: Course[];
 }
 
-function AdvanceCourseList(prop:CourseListProp) {
-    
-
+function AdvanceCourseList(props: CourseListProp) {
     return (
-        <div>
-            <h1>List of the Courses </h1>
+        <div className="container">
+            <h1 className="h2">List of the Courses</h1>
             <ul className="list-group">
-                {prop.courses.map((course) => (
+                {props.courses.map((course) => (
                     <li className="list-group-item" key={course.id}>
-                        {course.name} - {course.duration}
+                        {course.name}-{course.duration}
                     </li>
                 ))}
             </ul>
