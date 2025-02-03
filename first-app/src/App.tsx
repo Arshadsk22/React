@@ -4,6 +4,7 @@ import Name from './components/Name';
 import Toggle from './components/Toggle';
 import Profile from './components/Profile';
 import './App.css';
+import ToggleImage from './components/ImageToggle';
 
 function App() {
   const jdmCars = [
@@ -19,7 +20,8 @@ function App() {
       <Counter />
       <Name /> */}
       {/* <Toggle /> */}
-      <Profile />
+      {/* <Profile /> */}
+      <ToggleImage />
     </div>
   );
 }
