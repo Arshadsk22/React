@@ -5,6 +5,7 @@ import Toggle from './components/Toggle';
 import Profile from './components/Profile';
 import './App.css';
 import ToggleImage from './components/ImageToggle';
+import Greetings from './components/Greetings';
 
 function App() {
   const jdmCars = [
@@ -17,11 +18,12 @@ function App() {
   return (
     <div className="container">
       {/* <Vehicles items={jdmCars} title="JDM Cars" />
-      <Counter />
       <Name /> */}
+      <Counter />
       {/* <Toggle /> */}
       {/* <Profile /> */}
-      <ToggleImage />
+      {/* <Greetings>hello</Greetings> */}
+      {/* <ToggleImage /> */}
     </div>
   );
 }
