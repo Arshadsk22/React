@@ -7,6 +7,7 @@ import './App.css';
 import ArticleList from './components/ArticleList';
 import ToggleImage from './components/ImageToggle';
 import Greetings from './components/Greetings';
+import UserList from './components/UserList';
 
 function App() {
   const jdmCars = [
@@ -25,7 +26,8 @@ function App() {
       {/* <Profile /> */}
       {/* <Greetings>hello</Greetings> */}
       {/* <ToggleImage /> */}
-      <ArticleList />
+      {/* <ArticleList /> */}
+      <UserList />
     </div>
   );
 }

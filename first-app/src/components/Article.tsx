@@ -1,3 +1,4 @@
+import './Article .css'
 interface ArticleProps {
     title: string;
     children: string; // Restricting children to only text
