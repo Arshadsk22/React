@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       {/* <Products /> */}
-      <AdvanceProducts product={fetchProducts()} />
+      <AdvanceProducts  />
     </>
   )
 }
