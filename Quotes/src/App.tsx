@@ -1,42 +1,24 @@
-import Quotes from './components/Quotes';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Import Bootstrap JS
+import ProductList from './components/ProdutList';
+import ProductDetails from './components/ProductDetails';
 
 function App() {
-  const quotes=[
-    {
-      id: 1,
-      quote: "Your heart is the size of an ocean. Go find yourself in its hidden depths.",
-      author: "Rumi"
-    },
-    {
-      id: 2,
-      quote: "The Bay of Bengal is hit frequently by cyclones. The months of November and May, in particular, are dangerous in this regard.",
-      author: "Abdul Kalam"
-    },
-    {
-      id: 3,
-      quote: "Thinking is the capital, Enterprise is the way, Hard Work is the solution.",
-      author: "Abdul Kalam"
-    },
-    {
-      id: 4,
-      quote: "If You Can'T Make It Good, At Least Make It Look Good.",
-      author: "Bill Gates"
-    },
-    {
-      id: 5,
-      quote: "Heart be brave. If you cannot be brave, just go. Love's glory is not a small thing.",
-      author: "Rumi"
-    },
-    {
-      id: 6,
-      quote: "It is bad for a young man to sin; but it is worse for an old man to sin.",
-      author: "Abu Bakr (R.A)"
-    }];
   return (
     <>
-      <Quotes quotes={quotes}/>
+      <Router>
+        <div className="container mt-4">
+          <h1 className="text-center">Products</h1>
+          <Routes>
+            <Route path="/" element={<ProductList />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
+          </Routes>
+        </div>
+      </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
