@@ -35,7 +35,7 @@ const ProductList: React.FC = () => {
           <div key={product.id} className="col-md-4 mb-4">
             <Link to={`/products/${product.id}`} className="text-decoration-none">
               <div className="card h-100">
-                <img src={product.thumbnail} className="card-img-top" alt={product.title} />
+                <img src={product.thumbnail} className="card-img-top"/>
                 <div className="card-body">
                   <h5 className="card-title">{product.title}</h5>
                   <p className="card-text">${product.price}</p>

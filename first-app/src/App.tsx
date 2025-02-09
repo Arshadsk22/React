@@ -33,14 +33,14 @@ function App() {
         </header>
         <nav className="navbar navbar-expand-lg bg-body-tertiary mb-5">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">Navbar</a>
+            <a className="navbar-brand" href="/">Navbar</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link className="nav-link active" to="/">Home</Link>
+                  <Link className="nav-link" to="/Home">Home</Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/About">About Us</Link>
@@ -59,8 +59,15 @@ function App() {
             </div>
           </div>
         </nav>
+        <div>
+          <Link to="/Home" className="btn btn-primary me-2">Home</Link>
+          <Link to="/About" className="btn btn-secondary me-2">About</Link>
+          <Link to="/Count" className="btn btn-success me-2">Counter</Link>
+          <Link to="/ArticleList" className="btn btn-danger me-2">ArticleList</Link>
+          <Link to="/Recipes" className="btn btn-warning me-2">Recipes</Link>
+        </div>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/Home" element={<Home />}></Route>
           <Route path="/About" element={<About />}></Route>
           <Route path="/Count" element={<Counter />}></Route>
           <Route path="/ArticleList" element={<ArticleList />}></Route>

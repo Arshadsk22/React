@@ -10,7 +10,6 @@ interface Product {
   category: string;
   brand: string;
   rating: number;
-  images: string[];
 }
 
 const ProductDetails: React.FC = () => {
@@ -39,7 +38,7 @@ const ProductDetails: React.FC = () => {
   return (
     <div className="container mt-4">
       <h2>{product.title}</h2>
-      <img src={product.thumbnail} alt={product.title} style={{ width: "200px" }} />
+      <img src={product.thumbnail} style={{ width: "200px" }} />
       <p>{product.description}</p>
       <p>
         <strong>Price:</strong> ${product.price}
@@ -54,12 +53,6 @@ const ProductDetails: React.FC = () => {
         <strong>Rating:</strong> {product.rating}
       </p>
       <div>
-        <strong>Images:</strong>
-        <div className="d-flex flex-wrap">
-          {product.images.map((image, index) => (
-            <img key={index} src={image} style={{ width: "100px", margin: "5px" }} />
-          ))}
-        </div>
       </div>
       <Link to="/" className="btn btn-primary mt-3">
         ← Back to Products
