@@ -33,14 +33,16 @@ const ProductList: React.FC = () => {
 
   return (
     <div className="container mt-4">
-      {error && <p className="text-danger">{error}</p>}
-      <input
-        type="text"
-        className="form-control mb-3"
-        placeholder="Ex: Red nail polish etc.."
-        value={searchProduct}
-        onChange={(e) => setSearchProduct(e.target.value)}
-      />
+      {error && <p className="text-danger text-center">{error}</p>}
+      <div className="d-flex justify-content-center mb-3">
+        <input
+          type="text"
+          className="form-control w-50"
+          placeholder="Ex: Red nail polish etc.."
+          value={searchProduct}
+          onChange={(e) => setSearchProduct(e.target.value)}
+        />
+      </div>
       <div className="row">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
@@ -58,7 +60,14 @@ const ProductList: React.FC = () => {
             </div>
           ))
         ) : (
-          <p className="text-center">No products found</p>
+          <div className="alert alert-danger d-flex justify-content-center" role="alert">
+            <div>
+              <h4 className="alert-heading">Product Not Found</h4>
+              <p>Please search the products which are available on the Product List</p>
+              <hr />
+              <p className="mb-0"><strong>Note:</strong> Always check the Product List before searching for the products :)</p>
+            </div>
+          </div>
         )}
       </div>
     </div>
