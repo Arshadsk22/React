@@ -11,9 +11,11 @@ function App() {
     <>
       <Router>
         <div className="container mt-4">
-          <h1 className="text-center">Search Posts</h1>
+          <h1 className="text-center">Products</h1>
           <Routes>
-            <Route path="/" element={<PostListSearch />} />
+            {/* <Route path="/" element={<PostListSearch />} /> */}
+            <Route path="/" element={<ProductList />} />
+            <Route path="/product:id" element={<ProductList />} />
           </Routes>
         </div>
       </Router>
