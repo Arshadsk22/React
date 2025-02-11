@@ -30,7 +30,7 @@ const AddCourse: React.FC = () => {
             setTitleError("Title is required");
             validForm = false;
         }
-        else{
+        else {
             setTitleError('');
         }
 
@@ -38,7 +38,7 @@ const AddCourse: React.FC = () => {
             setDescriptionError("Description is required");
             validForm = false;
         }
-        else{
+        else {
             setDescriptionError('');
         }
 
@@ -77,7 +77,11 @@ const AddCourse: React.FC = () => {
                 <div>
                     <div className="mb-2">
                         <label htmlFor="titleTextBox" className="text-secondary">
-                            Title
+                            Title{titleError ? (
+                                <p className="text-danger small"> {titleError} </p>
+                            ) : (
+                                <p></p>
+                            )}
                         </label>
                     </div>
                     <div>
@@ -95,7 +99,11 @@ const AddCourse: React.FC = () => {
                 <div>
                     <div className="mb-2">
                         <label htmlFor="descriptiontextBox" className="text-secondary">
-                            Description
+                            Description{descriptionError ? (
+                                <p className="text-danger small"> {descriptionError} </p>
+                            ) : (
+                                <p></p>
+                            )}
                         </label>
                     </div>
                     <div>
@@ -126,6 +134,7 @@ const AddCourse: React.FC = () => {
                             placeholder="Enter Course Duration"
                             onChange={(e) => setDuration(e.target.value)}
                         />
+
                     </div>
                 </div>
                 <div>

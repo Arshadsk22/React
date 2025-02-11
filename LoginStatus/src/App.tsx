@@ -14,14 +14,14 @@ function App() {
       </header>
       <Router>
         <Link to="/courses" className="btn btn-outline-success">
-         Courses
+          Courses
         </Link>
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/courses" element={<Courses />}></Route>
           <Route path="/add-courses" element={<AddCourses />}></Route>
         </Routes>
-      </ Router>
+      </Router>
     </div>
   )
 }

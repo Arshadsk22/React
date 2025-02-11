@@ -20,6 +20,18 @@ function Courses() {
         setCourses(data);
     };
 
+    const deleteCourse = async (id: string) => {
+        const request = {
+            method: 'DELETE',
+        };
+        const response = await fetch(`${API_URL}/${id}`, request);
+        const data = await response.json();
+        console.log(data);
+
+        const updatedCourses = courses.filter((course) => course.id != id);
+        setCourses(updatedCourses);
+    };
+
     useEffect(() => {
         fetchCourses();
     }, []);
@@ -38,7 +50,8 @@ function Courses() {
                         <th scope="col">Description</th>
                         <th scope="col">Duration</th>
                         <th scope="col">Fees</th>
-                        <th scope="col">Image</th>
+                        {/* <th scope="col">Image</th> */}
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,6 +64,9 @@ function Courses() {
                             <td>{course.fees}</td>
                             <td>
                                 <img src={course.imageUrl} alt={course.title} className="img-thumbnail" style={{ width: "60px", height: "60px" }} />
+                            </td>
+                            <td>
+                                <button className="btn btn-danger" onClick={() => deleteCourse(course.id)}>❌ Delete</button>
                             </td>
                         </tr>
                     ))}

@@ -2,8 +2,9 @@ header {
   background-color: #4caf50;
   color: white;
   padding: 1rem;
+  width: 100%;
 }
 h1 {
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
