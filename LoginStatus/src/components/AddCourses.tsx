@@ -4,7 +4,9 @@ const AddCourse: React.FC = () => {
     const API_URL = "https://67a97dbe6e9548e44fc3c58c.mockapi.io/courses";
 
     const [title, setTitle] = useState("");
+    const [titleError, setTitleError] = useState("");
     const [description, setDescription] = useState("");
+    const [descriptionError, setDescriptionError] = useState("");
     const [duration, setDuration] = useState("");
     const [fees, setFees] = useState("");
     const [imageUrl, setImageUrl] = useState("");
@@ -12,8 +14,36 @@ const AddCourse: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        addUser();
+
+        if (isFormValid()) {
+            addUser();
+            setMessage('');
+        }
+        else {
+            setMessage("Please fix the validation errors");
+        }
     };
+
+    const isFormValid = () => {
+        let validForm: boolean = true;
+        if (title.trim() == '') {
+            setTitleError("Title is required");
+            validForm = false;
+        }
+        else{
+            setTitleError('');
+        }
+
+        if (description.trim() == '') {
+            setDescriptionError("Description is required");
+            validForm = false;
+        }
+        else{
+            setDescriptionError('');
+        }
+
+        return validForm;
+    }
 
     const addUser = async () => {
         let requestBody = { title, description, duration, fees, imageUrl };

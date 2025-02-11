@@ -1,3 +1,4 @@
+import './App.css'
 import AddCourses from "./components/AddCourses";
 import Courses from "./components/Courses";
 import HomePage from "./components/Home";
@@ -8,6 +9,9 @@ function App() {
 
   return (
     <div className="container">
+      <header>
+        <h1>React Demos</h1>
+      </header>
       <Router>
         <Link to="/courses" className="btn btn-outline-success">
          Courses
