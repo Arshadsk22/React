@@ -16,7 +16,7 @@ const AddCourse: React.FC = () => {
         e.preventDefault();
 
         if (isFormValid()) {
-            addUser();
+            addCourse();
             setMessage('');
         }
         else {
@@ -45,7 +45,7 @@ const AddCourse: React.FC = () => {
         return validForm;
     }
 
-    const addUser = async () => {
+    const addCourse = async () => {
         let requestBody = { title, description, duration, fees, imageUrl };
         let requestBodyJSON = JSON.stringify(requestBody);
 
