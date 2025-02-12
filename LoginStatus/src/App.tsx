@@ -2,6 +2,7 @@ import './App.css'
 import AddCourses from "./components/AddCourses";
 import Courses from "./components/Courses";
 import HomePage from "./components/Home";
+import EditCourse from './components/EditCourses';
 import LoginStatus from "./components/LoginStatus";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/courses" element={<Courses />}></Route>
           <Route path="/add-courses" element={<AddCourses />}></Route>
+          <Route path="/edit-course/:id" element={<EditCourse />}></Route>
         </Routes>
       </Router>
     </div>

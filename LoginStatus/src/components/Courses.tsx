@@ -50,7 +50,7 @@ function Courses() {
                         <th scope="col">Description</th>
                         <th scope="col">Duration</th>
                         <th scope="col">Fees</th>
-                        {/* <th scope="col">Image</th> */}
+                        <th scope="col">Image</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -66,7 +66,10 @@ function Courses() {
                                 <img src={course.imageUrl} alt={course.title} className="img-thumbnail" style={{ width: "60px", height: "60px" }} />
                             </td>
                             <td>
-                                <button className="btn btn-danger" onClick={() => deleteCourse(course.id)}>❌ Delete</button>
+                                <button className="btn btn-danger m-2" onClick={() => deleteCourse(course.id)}>❌Delete</button>
+                                <Link to={`/edit-course/${course.id}`} className="btn btn-warning">
+                                    ✏️Edit Course
+                                </Link>
                             </td>
                         </tr>
                     ))}
