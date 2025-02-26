@@ -57,16 +57,16 @@ function AddCar() {
         const request = {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: requestBodyJSON,
+            body: requestBodyJSON
         };
 
         const response = await fetch(API_URL, request);
         if (response.ok) {
-            console.log("Course added..");
+            console.log("Car added..");
             setBrand('');
             setModel('');
             setPrice('');
-            setMessage('Course Added Successfully');
+            setMessage('Car Added Successfully');
         }
     };
     return (

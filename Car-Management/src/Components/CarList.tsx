@@ -14,9 +14,9 @@ function CarList() {
         const data = await response.json();
         setCarList(data);
     }
-    const deleteCourse = async (id: string) => {
-        const updatedCourses = carList.filter((car) => car.id != id);
-        setCarList(updatedCourses);
+    const deleteCar = async (id: string) => {
+        const updatedCars = carList.filter((car) => car.id != id);
+        setCarList(updatedCars);
     };
     useEffect(() => {
         fetchCars();
@@ -41,7 +41,7 @@ function CarList() {
                             <td>{car.brand}</td>
                             <td>{car.model}</td>
                             <td>{car.price}</td>
-                            <button className="btn btn-danger btn-sm" onClick={() => deleteCourse(car.id)}>❌Delete</button>
+                            <button className="btn btn-danger btn-sm" onClick={() => deleteCar(car.id)}>❌Delete</button>
                             <Link to={`/editCar/${car.id}`} className="btn btn-warning btn-sm m-2">✏️Edit</Link>
                         </tr>
                     ))}
